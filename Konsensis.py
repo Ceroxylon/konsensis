@@ -35,7 +35,6 @@ def call_model(api_name, model, system_prompt, user_prompt):
         )
     # Check if the response contains 'content' and it's a list with at least one TextBlock
     if isinstance(response.content, list) and response.content:
-        # Assuming the first item is a TextBlock object and accessing its 'text' attribute
         first_content_item = response.content[0]
         if hasattr(first_content_item, 'text'):
             return first_content_item.text.strip()  # Use attribute access for objects
@@ -93,13 +92,13 @@ def main():
 
         if is_numeric(response):
             score = float(response)
-            print(f"Score received from {model_api}: {score}")  # Display the score received
+            print(f"Score received from {model_api}: {score}\n\n")  # Display the score received
             if score >= threshold:
-                print(f"Final response meets threshold: {score}")
+                print(f"Final response meets threshold: {score}\n\n")
                 print("Accepted answer:", last_text_response)
                 break  # Exit the loop if the threshold is met
         else:
-            print(f"Received text response from {model_api}, continuing interaction.")
+            print(f"Received text response from {model_api}, continuing interaction.\n\n")
             last_text_response = response  # Set the new response to be sent back in the next iteration
 
         # Switch model or keep using the same in recursive mode
