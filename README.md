@@ -4,16 +4,16 @@ A command line platform to get a second opinion of an LLM's response from itself
 # Getting Started:
 
 1. After cloning repo, add API keys to .env file in the format:
-<pre>OPENAI_API_KEY=<API KEY>
-ANTHROPIC_API_KEY=<API KEY></API></pre>
+<pre>OPENAI_API_KEY={API KEY}
+ANTHROPIC_API_KEY={API KEY}</pre>
 
 2. Create venv environment and/or install dependencies in requirements.txt
 
 # Usage:
 
-1. Run Konsensis.py from the terminal of your choice (tested on zsh):
+1. Run Konsensis.py from the terminal of your choice (developed using zsh on MacOS):
 
-   $ python3 Konsensis.py [OPTIONS] USER_QUESTION
+<pre> % python3 Konsensis.py [OPTIONS] USER_QUESTION </pre>
 
 Options:
 <pre>
