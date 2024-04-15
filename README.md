@@ -1,4 +1,4 @@
-# konsensis
+# Konsensis
 A command line platform to get a second opinion of an LLM's response from itself or another LLM.
 
 # Getting Started:
