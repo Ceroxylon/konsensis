@@ -35,7 +35,7 @@ The two models used to start this project are OpenAI GPT4 (Option 1), and Anthro
 
 # EXAMPLE INPUT:
 
-python3 dev_Konsensis.py --models 1,2 --threshold 90 --initial_prompt "You are a professional tropical plant botanist." "Name 3 very rare palm trees from Madagascar"
+python3 Konsensis.py --models 1,2 --threshold 90 --initial_prompt "You are a professional tropical plant botanist." "Name 3 very rare palm trees from Madagascar"
 
 # EXAMPLE OUTPUT:
 
