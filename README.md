@@ -10,12 +10,14 @@ ANTHROPIC_API_KEY=<API KEY>
 2. Create venv environment and/or install dependencies in requirements.txt
 
 3. Run konsensis.py from the terminal of your choice (tested on zsh):
+
    $ python3 konsensis.py
 
 # Using the tool:
 
 1. Follow the prompts to give the initial instructions to get the conversation started:
-- Choose models to use: For now only OpenAI's GPT4 and Anthropic's Claude are supported as a proof of concept, but it will be easy to add more later (HF and local models are next). Enter in 1,2 for GPT4 to give the initial prompt and Claude be the grader, or 2,1 for the other way around. Getting one or either to grade itself is accomplished with "recursive mode"
+- Choose models to use: For now only OpenAI's GPT4 and Anthropic's Claude are supported as a proof of concept, but it will be easy to add more later (HF and local models are next).
+Enter in 1,2 for GPT4 to give the initial response and Claude be the grader, or 2,1 for the other way around. Getting one or either to grade itself is accomplished with "recursive mode"
   
 - Enable recursive mode? (yes/no): This will get a model to grade itself.
   
