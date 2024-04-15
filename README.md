@@ -19,9 +19,13 @@ Options:
   --models TEXT          Choose models to use OpenAI is 1, Claude is 2 (use
                          "1,2" for both, "2,1" to get the first answer from
                          Claude).
+                         
   --recursive            Enable recursive mode. This along with selecting a single model will feed the response back into the original model.
+  
   --threshold INTEGER    Enter a quality threshold (1-100). Things get interesting above 90 with the more sophisitcated models.
+  
   --initial_prompt TEXT  Enter an Initial System Prompt. This sets the intention, behavior, and purpse of the USER_QUESTION
+  
   --help                 Show this message and exit.
 
 # EXAMPLE INPUT:
