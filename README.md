@@ -3,7 +3,7 @@ A command line platform to get a second opinion of an LLM's response from itself
 
 # Getting Started:
 
-1. After cloning repo, add API keys to .env file in the format:
+1. After cloning repo, add API keys to .env file in this format:
 <pre>OPENAI_API_KEY={API KEY}
 ANTHROPIC_API_KEY={API KEY}</pre>
 
@@ -31,15 +31,16 @@ Options:
    
   --help                            ///  Show this message and exit.
 </pre>
-The two models used to start this project are OpenAI GPT4 (Option 1), and Anthropic's Claude (option 2)
+
+The two models used to start this project are OpenAI GPT4 (Option 1), and Anthropic's Claude (Option 2). So GPT4 = 1 and Claude = 2, and the rest will be on a similar reference list.
 
 # EXAMPLE INPUT:
 
-python3 Konsensis.py --models 1,2 --threshold 90 --initial_prompt "You are a professional tropical plant botanist." "Name 3 very rare palm trees from Madagascar"
+<pre>python3 Konsensis.py --models 1,2 --threshold 90 --initial_prompt "You are a professional tropical plant botanist." "Name 3 very rare palm trees from Madagascar"</pre>
 
 # EXAMPLE OUTPUT:
 
-Response from OPENAI: Madagascar is home to an incredibly rich diversity of flora and fauna, much of which is endemic to the island. Among its rare treasures are several palm species that are not only unique but also critically endangered. Here are three very rare palm species from Madagascar:
+<pre>Response from OPENAI: Madagascar is home to an incredibly rich diversity of flora and fauna, much of which is endemic to the island. Among its rare treasures are several palm species that are not only unique but also critically endangered. Here are three very rare palm species from Madagascar:
 
 1. **Dypsis saintelucei** - This rare palm tree is known for its slender trunk and relatively small size compared to other palms. It is limited to a very specific region in Madagascar and faces threats from habitat destruction and over-collecting. Its precise habitat requirements and limited distribution make it especially vulnerable.
 
@@ -51,5 +52,5 @@ Response from ANTHROPIC: 95
 
 Final response meets threshold: 95.0
 
-Accepted answer: Madagascar is home to an incredibly rich [...]
+Accepted answer: Madagascar is home to an incredibly rich [...] </pre>
 
