@@ -9,20 +9,38 @@ ANTHROPIC_API_KEY=<API KEY>
 
 2. Create venv environment and/or install dependencies in requirements.txt
 
-3. Run konsensis.py from the terminal of your choice (tested on zsh):
+# Usage:
 
-   $ python3 konsensis.py
+1. Run konsensis.py from the terminal of your choice (tested on zsh):
 
-# Using the tool:
+   $ python3 konsensis.py [OPTIONS] USER_QUESTION
 
-1. Follow the prompts to give the initial instructions to get the conversation started:
-- Choose models to use: For now only OpenAI's GPT4 and Anthropic's Claude are supported as a proof of concept, but it will be easy to add more later (HF and local models are next).
-Enter in 1,2 for GPT4 to give the initial response and Claude be the grader, or 2,1 for the other way around. Getting one or either to grade itself is accomplished with "recursive mode"
-  
-- Enable recursive mode? (yes/no): This will get a model to grade itself.
-  
-- Enter a quality threshold (1-100): Claude seems to think the average GPT4 response is around 90, so the range from 90-100 is where things heat up.
-  
-- Enter an initial system prompt: This is the starting prompt that lets you outline the scope, personality, and mission of the inital model's response.
-  
-- Enter your prompt: Finally, enter in the prompt that you want to assess. It will display the initial response, the grade, and either pass or fail depending on the threshold you require.
+Options:
+  --models TEXT          Choose models to use OpenAI is 1, Claude is 2 (use
+                         "1,2" for both, "2,1" to get the first answer from
+                         Claude).
+  --recursive            Enable recursive mode. This along with selecting a single model will feed the response back into the original model.
+  --threshold INTEGER    Enter a quality threshold (1-100). Things get interesting above 90 with the more sophisitcated models.
+  --initial_prompt TEXT  Enter an Initial System Prompt. This sets the intention, behavior, and purpse of the USER_QUESTION
+  --help                 Show this message and exit.
+
+# EXAMPLE INPUT:
+
+python3 dev_Konsensis.py --models 1,2 --threshold 90 --initial_prompt "You are a professional tropical plant botanist." "Name 3 very rare palm trees from Madagascar"
+
+# EXAMPLE OUTPUT:
+
+Response from OPENAI: Madagascar is home to an incredibly rich diversity of flora and fauna, much of which is endemic to the island. Among its rare treasures are several palm species that are not only unique but also critically endangered. Here are three very rare palm species from Madagascar:
+
+1. **Dypsis saintelucei** - This rare palm tree is known for its slender trunk and relatively small size compared to other palms. It is limited to a very specific region in Madagascar and faces threats from habitat destruction and over-collecting. Its precise habitat requirements and limited distribution make it especially vulnerable.
+
+2. **Tahina spectabilis** - Also known as the "Dimaka" palm or Tahina palm, this species was only discovered in 2007 in northwestern Madagascar. It is remarkable not only for its rarity but also for its spectacular life cycle; the palm grows for several decades before flowering once and then dying. Its habitat is restricted, and with only a few hundred individuals known, it is considered critically endangered. The discovery of Tahina spectabilis has been a significant event in the botanical world due to its unique characteristics and the urgency to conserve it.
+
+3. **Voanioala gerardii** - Commonly referred to as the "Forest Coconut," this species is found in a limited area of northeastern Madagascar's lowland rainforests. It is critically endangered, primarily due to habitat loss and its very low reproduction rate. Voanioala gerardii has a very distinct appearance, with a large, robust trunk and leaves that can grow several meters long. Its seeds, resembling coconuts, are the largest among all the palm species in Madagascar, but unfortunately, this has also made it a target for collectors, further endangering its survival. [...]
+
+Response from ANTHROPIC: 95
+
+Final response meets threshold: 95.0
+
+Accepted answer: Madagascar is home to an incredibly rich [...]
+
