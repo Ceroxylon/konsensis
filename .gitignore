@@ -1,4 +1,5 @@
 .env
 .venv
 venv/
-dev/y
+dev/
+dev_Konsensis.py
