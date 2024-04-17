@@ -34,8 +34,8 @@ Options:
 </pre>
 
 Model number reference:
-OpenAI GPT4 = 1
-Anthropic Claude = 2
+OpenAI GPT4 = 1\
+Anthropic Claude = 2\
 Cohere Command R+ = 3
 
 # Example Input:
