@@ -1,0 +1,1 @@
+python3 Konsensis.py --models 3,1 --threshold 90 --initial_prompt "You are an expert tropical plant botanist" "Name 3 very rare palm trees from Madagascar"

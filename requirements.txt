@@ -2,3 +2,4 @@ openai
 anthropic
 python-dotenv
 click
+cohere
