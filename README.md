@@ -5,7 +5,8 @@ A command line platform to get a second opinion of an LLM's response from itself
 
 1. After cloning repo, add API keys to .env file in this format:
 <pre>OPENAI_API_KEY={API KEY}
-ANTHROPIC_API_KEY={API KEY}</pre>
+ANTHROPIC_API_KEY={API KEY}
+COHERE_API_KEY={API KEY}</pre>
 
 2. Create venv environment and/or install dependencies in requirements.txt
 
@@ -17,13 +18,13 @@ ANTHROPIC_API_KEY={API KEY}</pre>
 
 Options:
 <pre>
-  --models TEXT                      /// Choose models to use: OpenAI is 1, Claude is 2 (use "1,2" for both, "2,1" to get the first answer from Claude)
+  --models TEXT                      /// Choose models to use: GPT4 is 1, Claude is 2, Command R+ is 3 (use "1,2" to get the first response from GPT4 and send it to Claude, "2,1" to get the first answer from Claude, etc)
 
                          
   --recursive                       ///  Enable recursive mode. This along with selecting a single model will feed the response back into the original model.
 
   
-  --threshold INTEGER               ///  Enter a quality threshold (1-100). Things get interesting above 90 with the more sophisitcated models.
+  --threshold INTEGER               ///  Enter a quality threshold (1-100). Things get interesting above 90 with more sophisitcated models.
 
   
   --initial_prompt TEXT             ///  Enter an Initial System Prompt. This sets the intention, behavior, and purpse of the USER_QUESTION
@@ -32,7 +33,10 @@ Options:
   --help                            ///  Show this message and exit.
 </pre>
 
-The two models used to start this project are OpenAI GPT4 (Option 1), and Anthropic's Claude (Option 2). So GPT4 = 1 and Claude = 2, and the rest will be on a similar reference list.
+Model number reference:
+OpenAI GPT4 = 1
+Anthropic Claude = 2
+Cohere Command R+ = 3
 
 # Example Input:
 
