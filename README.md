@@ -34,11 +34,11 @@ Options:
 
 The two models used to start this project are OpenAI GPT4 (Option 1), and Anthropic's Claude (Option 2). So GPT4 = 1 and Claude = 2, and the rest will be on a similar reference list.
 
-# EXAMPLE INPUT:
+# Example Input:
 
 <pre>python3 Konsensis.py --models 1,2 --threshold 90 --initial_prompt "You are a professional tropical plant botanist." "Name 3 very rare palm trees from Madagascar"</pre>
 
-# EXAMPLE OUTPUT:
+# Example Output:
 
 <pre>Response from OPENAI: Madagascar is home to an incredibly rich diversity of flora and fauna, much of which is endemic to the island. Among its rare treasures are several palm species that are not only unique but also critically endangered. Here are three very rare palm species from Madagascar:
 
